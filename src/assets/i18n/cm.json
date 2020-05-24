@@ -1,0 +1,25 @@
+{
+    "menu_home" : "家",
+    "menu_news" : "News",
+    "menu_video" : "视频",
+    "menu_brochure" : "小册",
+    "menu_map" : "地图",
+    "menu_contact_us" : "联系我们",
+    "land" : "土地",
+    "water" : "水",
+    "transport" : "运输",
+    "energy" : "能源",
+    "gas" : "天然气",
+    "cfo" : "Aldo Christian Alvarez Torres | 首席财务官",
+    "cfo_phone" : "电话号码: +52 871-219-7224",
+    "cfo_email" : "电子邮件: aldoalvarez@freemanindustrialpark.com",
+    "pm" : "Manuel del Bosque Woo | 项目经理",
+    "pm_phone" : "电话号码: +52 871-457-1614",
+    "pm_email" : "电子邮件: mandelbosque@freemanindustrialpark.com",
+    "leave_us_message" : "给我们留言",
+    "barn" : "牛舍",
+    "logo" : "LOGO_FREEMAN_FINAL_BLANCO_CMN.png",
+    "brochure" : "Freeman_chm.pdf",
+    "video" : "https://www.youtube.com/embed/UJM9yDeVxxY?loop=1&rel=0"
+
+}

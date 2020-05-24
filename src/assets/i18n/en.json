@@ -1,0 +1,25 @@
+{
+    "menu_home" : "Home",
+    "menu_news" : "News",
+    "menu_video" : "Video",
+    "menu_brochure" : "Brochure",
+    "menu_map" : "Map",
+    "menu_contact_us" : "Contact Us",
+    "land" : "LAND",
+    "water" : "WATER",
+    "transport" : "TRANSPORT",
+    "energy" : "ENERGY",
+    "gas" : "GAS",
+    "cfo" : "Aldo Christian Alvarez Torres | CFO",
+    "cfo_phone" : "Cellphone: +52 871-219-7224",
+    "cfo_email" : "Email address: aldoalvarez@freemanindustrialpark.com",
+    "pm" : "Manuel del Bosque Woo | PROJECT MANAGER",
+    "pm_phone" : "Cellphone: +52 871-457-1614",
+    "pm_email" : "Email address: mandelbosque@freemanindustrialpark.com",
+    "leave_us_message" : "Leave us a message",
+    "barn" : "Barn",
+    "logo" : "LOGO_FREEMAN_FINAL_BLANCO.png",
+    "brochure" : "assets/Freeman.pdf",
+    "video" : "https://www.youtube.com/embed/UJM9yDeVxxY?loop=1&rel=0"
+
+}

@@ -1,0 +1,32 @@
+.thanks{
+    color: black;
+    font-weight: 100;
+}
+
+/* Add application styles & imports to this file! */
+
+.bounds {
+    height :90%;
+  }
+  
+  .sec1 {
+    color:white;
+    text-align: right;
+    padding-right: 1%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sec2 {
+    padding-left: 30px;
+    text-align: left;
+    display:flex;
+    align-items: center;
+    
+  }
+   
+  .content {
+    min-width: 300px;
+    /*height: 400px;*/
+  }
