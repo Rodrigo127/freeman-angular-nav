@@ -1,6 +1,22 @@
-<ngx-extended-pdf-viewer 
+<!-- <ngx-extended-pdf-viewer 
     [zoom]="'page-width'"
-    [src]="'assets/Freeman.pdf'" 
-    useBrowserLocale="true" 
+    [src]="'assets/Freeman.pdf#toolbar=0'" 
+    useBrowserLocale="true"
+    [customToolbar]="customCheckboxZoomToolbar" 
+    [showBorders]="false"
     height="100vh">
 </ngx-extended-pdf-viewer>
+
+
+<ng-template #customCheckboxZoomToolbar>
+
+</ng-template> -->
+
+<object [data]="urlBrochure | safeUrl" type="application/pdf" width="100%" height="100%">
+    <p>Your browser does not support PDFs.
+</object>
+
+<!-- <embed
+    [src]="urlBrochure | safeUrl"
+    width="100%" height="100%" 
+    type='application/pdf'/>    -->

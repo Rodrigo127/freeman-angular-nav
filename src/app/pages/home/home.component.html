@@ -1,12 +1,48 @@
-<section class="home-video">
+<!-- <section class="home-video">
     <video
       id="homeVideo" 
       class="pointer-none" 
-      src="assets/videos/LAND.mp4" 
+      src="{{dnsUrl}}LAND.mp4" 
       autoplay 
-      loop 
+      loop
+      playsinline
+      muted
       [muted]="true" 
       type="video/mp4">
       <code>video</code> not compatible on your browser.
     </video>
   </section>
+  <script>
+    var bgvideo = document.getElementById("homeVideo");
+    bgvideo.muted = true;
+    bgvideo.play();
+  </script> -->
+
+  <!-- The video -->
+  <section class="home-video">
+    <video autoplay 
+    loop
+    playsinline
+    muted
+    [muted]="true" 
+    id="myVideo">
+    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+  </section>
+  
+
+
+<script>
+  var video = document.getElementById("myVideo");
+  var btn = document.getElementById("myBtn");
+  
+  function myFunction() {
+    if (video.paused) {
+      video.play();
+      btn.innerHTML = "Pause";
+    } else {
+      video.pause();
+      btn.innerHTML = "Play";
+    }
+  }
+  </script>

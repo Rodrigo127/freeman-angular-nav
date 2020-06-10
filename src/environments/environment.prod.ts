@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  dnsUrl: "https://freemansc.sfo2.cdn.digitaloceanspaces.com/"
 };

@@ -1,5 +1,5 @@
 {
-  "name": "angular-material-nav",
+  "name": "freemansc",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -21,6 +21,7 @@
     "@angular/material": "^9.2.4",
     "@angular/platform-browser-dynamic": "^9.1.7",
     "@angular/router": "^9.1.7",
+    "@angular/service-worker": "^9.1.7",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "core-js": "^3.6.5",

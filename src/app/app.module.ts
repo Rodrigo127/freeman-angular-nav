@@ -28,6 +28,9 @@ import { BrochureComponent } from './pages/brochure/brochure.component';
 
 import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { LegacyComponent } from './pages/legacy/legacy.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,6 +38,7 @@ const appRoutes: Routes = [
   { path: 'map',      component: MapComponent },
   { path: 'brochure',      component: BrochureComponent },
   { path: 'contact-us',      component: ContactUsComponent },
+  { path: 'legacy',      component: LegacyComponent },
   // { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -49,7 +53,8 @@ const appRoutes: Routes = [
     SafeUrlPipe,
     MapComponent,
     BrochureComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    LegacyComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +76,8 @@ const appRoutes: Routes = [
           deps: [HttpClient]
       }
   }),
-  RouterModule.forRoot(appRoutes)
+  RouterModule.forRoot(appRoutes),
+  ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

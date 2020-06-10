@@ -16,23 +16,27 @@
       <a mat-list-item [routerLink]="['/map']" (click)="tooglemenu()">{{ 'menu_map' | translate | uppercase }}</a>
       <a mat-list-item [routerLink]="['/brochure']" (click)="tooglemenu()">{{ 'menu_brochure' | translate | uppercase }}</a>
       <a mat-list-item [routerLink]="['/contact-us']" (click)="tooglemenu()">{{ 'menu_contact_us' | translate | uppercase }}</a>
+      <a mat-list-item [routerLink]="['/legacy']" (click)="tooglemenu()">{{ 'menu_legacy' | translate | uppercase }}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        id="menuButton"
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
+      <div class="navcontainer">
+        <button
+          id="menuButton"
+          type="button"
+          class="burguer"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+        >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <!-- <span>social</span> -->
-      <a  class="navbar-brand" href="/">
-        <img  src="./assets/images/LOGO_FREEMAN_FINAL_NEGRO.png" alt="Freeman">
-      </a>
+        </button>
+        <a  class="navbar-brand" href="/">
+          <img  src="{{dnsUrl}}LOGO_FREEMAN_FINAL_NEGRO.png" alt="Freeman">
+        </a>
+      </div>
+    
     </mat-toolbar>
     <!-- Add Content Here -->
     

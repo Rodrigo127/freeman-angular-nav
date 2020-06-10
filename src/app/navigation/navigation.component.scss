@@ -22,7 +22,19 @@
 
 .navbar-brand{
   width: 200px;
-  display:inline-block;
-  align-items: center;
-  text-align: center;
+}
+
+.navcontainer {
+  display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+}
+
+.burguer{
+  position: absolute;
+  left: 10px;
 }
