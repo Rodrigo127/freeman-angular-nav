@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -7,12 +7,23 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  dnsUrl : string;
-  constructor() { 
+  dnsUrl: string;
+  @ViewChild('homeVideo') homeVideo: ElementRef;
+  constructor() {
     this.dnsUrl = environment.dnsUrl;
   }
-
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    let nativeVideo = this.homeVideo.nativeElement;
+    nativeVideo.muted = true;
+
+    if (nativeVideo.paused) {
+      nativeVideo.play();
+    }
+
+
   }
 
 }

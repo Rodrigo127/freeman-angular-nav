@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { SwUpdate } from '@angular/service-worker';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +12,21 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppComponent {
   title = 'Freeman';
   constructor(private translate: TranslateService,
-    private readonly updates: SwUpdate,) {
+    private readonly updates: SwUpdate,
+    private snackBar: MatSnackBar) {
     translate.setDefaultLang('en');
-}
+  }
+
+  ngOnInit() {
+    this.updates.available.subscribe(event => {
+      let snackBarRef = this.snackBar.open('New app version available', 'Update');
+
+
+      snackBarRef.afterDismissed().subscribe(() => {
+        this.updates.activateUpdate().then(() => document.location.reload(true));
+      });
+    });
+
+
+  }
 }

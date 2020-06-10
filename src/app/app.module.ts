@@ -32,6 +32,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -70,6 +71,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     FlexLayoutModule,
     PdfViewerModule,
+    MatSnackBarModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
