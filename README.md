@@ -1,5 +1,3 @@
 hello
 s
 s
-s
-
