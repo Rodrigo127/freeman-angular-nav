@@ -1,4 +1,4 @@
-<!-- <section class="home-video">
+<section class="home-video">
     <video
       id="homeVideo" 
       class="pointer-none" 
@@ -16,33 +16,21 @@
     var bgvideo = document.getElementById("homeVideo");
     bgvideo.muted = true;
     bgvideo.play();
-  </script> -->
+  </script>
 
   <!-- The video -->
-  <section class="home-video">
-    <video autoplay 
-    loop
-    playsinline
-    muted
-    [muted]="true" 
-    id="myVideo">
-    <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
-    </video>
-  </section>
+
   
 
 
 <script>
-  var video = document.getElementById("myVideo");
-  var btn = document.getElementById("myBtn");
+  var video = document.getElementById("homeVideo");
   
   function myFunction() {
     if (video.paused) {
       video.play();
-      btn.innerHTML = "Pause";
     } else {
       video.pause();
-      btn.innerHTML = "Play";
     }
   }
   </script>
