@@ -8,7 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent {
   title = 'Freeman';
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+    private readonly updates: SwUpdate,) {
     translate.setDefaultLang('en');
 }
 }

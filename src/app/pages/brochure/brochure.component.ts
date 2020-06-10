@@ -10,12 +10,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class BrochureComponent implements OnInit {
   dnsUrl : string;
   urlBrochure;
-  @Input() data: any;
+  //@Input() src: any;
   // @Input() data: any;
   constructor(private sanitizer: DomSanitizer,private renderer: Renderer2, 
     private elRef : ElementRef) { 
     this.dnsUrl = environment.dnsUrl;
-    this.urlBrochure = this.dnsUrl+ 'Freeman.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit'; 
+    this.urlBrochure = this.dnsUrl+ 'Freeman.pdf'; 
     
   }
   ngOnInit(): void {
@@ -23,10 +23,10 @@ export class BrochureComponent implements OnInit {
 
 
 
-  ngAfterViewInit() {
-    const el = this.elRef.nativeElement;
-    this.renderer.setProperty(el, 'data', this.data)
-    this.renderer.setProperty(el, 'outerHTML', el.outerHTML)
-  }
+  // ngAfterViewInit() {
+  //   const el = this.elRef.nativeElement;
+  //   this.renderer.setProperty(el, 'data', this.src)
+  //   this.renderer.setProperty(el, 'outerHTML', el.outerHTML)
+  // }
 
 }

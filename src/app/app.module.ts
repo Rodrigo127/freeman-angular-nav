@@ -26,11 +26,12 @@ import { MapComponent } from './pages/map/map.component';
 import { BrochureComponent } from './pages/brochure/brochure.component'; 
 
 
-import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { LegacyComponent } from './pages/legacy/legacy.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -67,8 +68,8 @@ const appRoutes: Routes = [
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    NgxExtendedPdfViewerModule,
     FlexLayoutModule,
+    PdfViewerModule,
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
