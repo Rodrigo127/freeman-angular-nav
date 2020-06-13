@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, Inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -9,21 +10,34 @@ import { environment } from 'src/environments/environment';
 export class HomeComponent implements OnInit {
   dnsUrl: string;
   @ViewChild('homeVideo') homeVideo: ElementRef;
-  constructor() {
+  constructor(private _renderer2: Renderer2,
+    @Inject(DOCUMENT) private _document: Document) {
     this.dnsUrl = environment.dnsUrl;
   }
   ngOnInit(): void {
+    window.addEventListener('load', this.playVideo, true);
   }
 
   ngAfterViewInit(): void {
-    let nativeVideo = this.homeVideo.nativeElement;
-    nativeVideo.muted = true;
-
-    if (nativeVideo.paused) {
-      nativeVideo.play();
-    }
-
-
+    this.playVideo();
+    let script = this._renderer2.createElement('script');
+    script.text = `
+      playhomeVideo(){
+        document.getElementById('homeVideo').play();
+      }
+      plyhomeVideo;
+    `;
+    this._renderer2.appendChild(this._document.body, script);
   }
 
+  playVideo() {
+    if (this.homeVideo) {
+      let nativeVideo = this.homeVideo.nativeElement;
+      nativeVideo.muted = true;
+
+      if (nativeVideo.paused) {
+        nativeVideo.play();
+      }
+    }
+  }
 }

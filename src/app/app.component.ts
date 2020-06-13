@@ -19,12 +19,11 @@ export class AppComponent {
 
   ngOnInit() {
     this.updates.available.subscribe(event => {
-      let snackBarRef = this.snackBar.open('New app version available', 'Update');
+      // let snackBarRef = this.snackBar.open('New version available', 'Refresh');
 
-
-      snackBarRef.afterDismissed().subscribe(() => {
-        this.updates.activateUpdate().then(() => document.location.reload(true));
-      });
+      // snackBarRef.afterDismissed().subscribe(() => {
+      this.updates.activateUpdate().then(() => document.location.reload(true));
+      // });
     });
 
 

@@ -22,8 +22,7 @@ export class MapComponent implements OnInit {
     let script = this._renderer2.createElement('script');
        script.text = `
        var map;
-       var src = '../../assets/kml/ZONA_IND_PERIM.kml';
-       src = 'https://freemansc.sfo2.cdn.digitaloceanspaces.com/ZONA_IND_PERIM.kml';
+       var src = 'https://freemansc.sfo2.cdn.digitaloceanspaces.com/ZONA_IND_PERIM%20(2).kml';
 
        function initMap() {
            var zoom = 0;
