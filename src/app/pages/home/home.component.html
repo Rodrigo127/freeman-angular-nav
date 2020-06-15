@@ -1,9 +1,9 @@
 <section class="home-video">
     <video
+      id= "homeVideo"
       #homeVideo
       class="pointer-none" 
       src="{{dnsUrl}}LAND.mp4" 
-      poster="{{dnsUrl}}LAND.png"
       autoplay 
       loop
       playsinline
@@ -13,4 +13,18 @@
       <code>video</code> not compatible on your browser.
     </video>
   </section>
- 
+ <script>
+   function playHome(){
+     var bgVideo = document.getElementById("homeVideo");
+     bgVideo.muted = true;
+     bgVideo.play();
+    }
+
+    playHome();
+    function myFunction() {
+      setInterval(function(){ 
+        playHome(); 
+        bgVideo.click();
+      }, 3000);
+    }
+ </script>

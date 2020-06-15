@@ -63,3 +63,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', end
     min-width: 300px;
     /*height: 400px;*/
   }
+
+  @media (max-width: 599px){
+    h1{
+      font-size: x-large;
+    }
+  }

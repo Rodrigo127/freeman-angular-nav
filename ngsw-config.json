@@ -12,6 +12,9 @@
           "/manifest.webmanifest",
           "/*.css",
           "/*.js"
+        ],
+        "urls" :[
+          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/**"
         ]
       }
     }, {

@@ -22,17 +22,18 @@ export class HomeComponent implements OnInit {
     this.playVideo();
     let script = this._renderer2.createElement('script');
     script.text = `
-      playhomeVideo(){
+      function playhomeVideo(){
         document.getElementById('homeVideo').play();
       }
-      plyhomeVideo;
+      playhomeVideo();
     `;
     this._renderer2.appendChild(this._document.body, script);
   }
 
   playVideo() {
-    if (this.homeVideo) {
+    
       let nativeVideo = this.homeVideo.nativeElement;
+      if (nativeVideo) {
       nativeVideo.muted = true;
 
       if (nativeVideo.paused) {
