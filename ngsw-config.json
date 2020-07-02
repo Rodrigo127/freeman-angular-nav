@@ -14,7 +14,11 @@
           "/*.js"
         ],
         "urls" :[
-          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/**"
+          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/Freeman.pdf",
+          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/LOGO_FREEMAN_FINAL_NEGRO.png",
+          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/Manolo.png",
+          "https://freemansc.sfo2.cdn.digitaloceanspaces.com/ONU.png",
+          "https://freemansc.sfo2.digitaloceanspaces.com/ZONA_IND_PERIM.kml"
         ]
       }
     }, {
