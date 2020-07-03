@@ -61,3 +61,33 @@
     color: black;
   }
   
+  .float-learn-more-container{
+    position:fixed;
+    width:auto;
+    height:auto;
+    bottom:70px;
+    right:90px;
+    color:#FFF;
+    text-align:center;
+    font: Roboto, "Helvetica Neue", sans-serif;
+  }
+
+  @media (max-width: 768px) {
+    .float-learn-more-container {
+      right:0px;
+      left:0px;
+    }
+  }
+  
+  .float-learn-more-button{
+    background-color:rgb(0, 0, 0);
+    color:#FFF;
+    text-align:center;
+    padding: 5px 20px;
+    text-decoration: none;
+    border: solid #FFF 1px;
+    display: inline-block;
+    width:130px;
+    font-weight: bold;
+    font-size: small;
+  }
